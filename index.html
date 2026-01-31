@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Guitar Hero Lite — Advanced</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div id="ui">
+			<header>
+				<h1>Guitar Hero Lite — Advanced</h1>
+			</header>
+
+					<div id="top-bar">
+						<div id="score">Score: <span id="score-val">0</span></div>
+						<div id="combo">Combo: <span id="combo-val">0</span></div>
+						<div id="mult">Multiplier: x<span id="mult-val">1</span></div>
+						<div id="controls">Keys: D F J K (or click lanes)</div>
+						<div id="progress-wrap" aria-hidden="true">
+							<div id="progress-bar"></div>
+						</div>
+					</div>
+
+			<div id="game-wrap">
+				<canvas id="game-canvas"></canvas>
+				<div id="lane-keys">
+					<button class="lane-btn" data-lane="0">D</button>
+					<button class="lane-btn" data-lane="1">F</button>
+					<button class="lane-btn" data-lane="2">J</button>
+					<button class="lane-btn" data-lane="3">K</button>
+				</div>
+			</div>
+
+			<div id="hud">
+				<div id="feedback"></div>
+				<div id="start-screen">
+					<div class="panel">
+						<h2>Start Game</h2>
+								<label>Difficulty:
+							<select id="difficulty">
+								<option value="easy">Easy</option>
+								<option value="medium" selected>Medium</option>
+								<option value="hard">Hard</option>
+							</select>
+						</label>
+								<div style="margin-top:8px">
+									<label>Load song (mp3/wav): <input id="audio-file" type="file" accept="audio/*"></label>
+								</div>
+								<div style="margin-top:8px">
+									<label>BPM: <input id="bpm" type="number" value="120" min="40" max="300" style="width:80px"></label>
+									<label style="margin-left:8px">Offset (s): <input id="offset" type="number" value="0" step="0.01" style="width:80px"></label>
+									<button id="gen-chart" style="margin-left:8px">Generate Chart</button>
+								</div>
+								<div style="margin-top:8px">
+									<button id="start-btn">Start (Chart only)</button>
+									<button id="start-song-btn">Start with Song</button>
+									<button id="random-btn">Play Random Track</button>
+								</div>
+								<audio id="song-audio" controls style="display:block;margin-top:8px;width:100%"></audio>
+					</div>
+				</div>
+			</div>
+
+			<footer>
+				<small>Made for fun — open this file in a browser to play.</small>
+			</footer>
+		</div>
+
+		<script src="game.js"></script>
+	</body>
+</html>
+

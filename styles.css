@@ -1,0 +1,37 @@
+
+*{box-sizing:border-box;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+html,body{height:100%}
+body{background:linear-gradient(135deg,#0f1724 0%, #071021 60%);color:#e6eef8;margin:0;display:flex;align-items:center;justify-content:center;padding:24px}
+#ui{width:980px;max-width:95vw}
+header h1{margin:0 0 8px;font-weight:700;letter-spacing:0.6px}
+#top-bar{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+#score,#combo,#mult{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04)}
+#controls{margin-left:auto;color:#9fb4d8}
+#progress-wrap{flex:1;margin-left:16px;height:10px;background:rgba(255,255,255,0.04);border-radius:6px;overflow:hidden;border:1px solid rgba(255,255,255,0.02)}
+#progress-bar{height:100%;width:0;background:linear-gradient(90deg,#ff6b6b,#ffb86b,#7be495);box-shadow:0 4px 18px rgba(123,228,149,0.12);transition:width 0.12s linear}
+
+#game-wrap{position:relative;border-radius:12px;overflow:hidden;padding:18px;box-shadow:0 12px 60px rgba(3,10,20,0.6);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12))}
+#game-canvas{display:block;background:radial-gradient(circle at 20% 10%, rgba(255,255,255,0.02), transparent 10%), linear-gradient(180deg,#071826 0%, #071826 100%);width:900px;height:600px;border-radius:8px}
+
+#lane-keys{display:flex;gap:8px;position:absolute;left:50%;transform:translateX(-50%);bottom:10px}
+.lane-btn{background:linear-gradient(180deg,#1f2a3a,#17202a);color:#dbeeff;border:0;padding:10px 16px;border-radius:10px;cursor:pointer;box-shadow:0 6px 18px rgba(11,20,30,0.6);border:1px solid rgba(255,255,255,0.03);font-weight:600}
+.lane-btn:active{transform:translateY(1px);box-shadow:0 4px 12px rgba(11,20,30,0.6)}
+
+#hud{position:relative}
+#feedback{position:absolute;right:50px;top:180px;font-size:40px;color:#fff;text-shadow:0 6px 30px rgba(0,0,0,0.9);pointer-events:none}
+.perfect{color:#ffd86b;text-shadow:0 6px 30px rgba(255,216,107,0.18)}
+.great{color:#7be495;text-shadow:0 6px 30px rgba(123,228,149,0.12)}
+.good{color:#7fbfff;text-shadow:0 6px 30px rgba(127,191,255,0.12)}
+.miss{color:#ff6b6b;text-shadow:0 6px 30px rgba(255,107,107,0.08)}
+.info{color:#fff}
+.finish{color:#ffd1dc}
+
+#start-screen{position:absolute;left:20px;top:100px}
+.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);backdrop-filter: blur(6px)}
+
+footer{margin-top:12px;color:#93a7c1}
+
+/* small animations for notes */
+.note-glow{filter:drop-shadow(0 6px 18px rgba(0,0,0,0.6))}
+
+
